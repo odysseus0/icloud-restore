@@ -1,10 +1,24 @@
 # iCloud Restore
 
-Restore deleted files from iCloud Drive when the web UI fails.
+**Restore deleted files from iCloud Drive when the web UI fails.**
+
+```bash
+uvx icloud-restore
+```
+
+> *iCloud.com's "Recently Deleted" page freezes, crashes, or shows a spinning wheel forever? This tool fixes that.*
 
 ## The Problem
 
-iCloud.com's "Restore Files" page crashes when you have a large number of deleted files (100k+). The page tries to load everything before letting you click "Restore All", but it runs out of memory and crashes.
+iCloud.com's "Restore Files" page crashes or hangs when you have a large number of deleted files (10k+). Symptoms:
+
+- Page shows spinning wheel forever
+- Browser tab crashes or becomes unresponsive
+- "Restore All" button never appears
+- Page loads partially then freezes
+- Safari/Chrome runs out of memory
+
+This happens because the web UI tries to render all deleted files at once before letting you restore them. Apple hasn't fixed this bug for years.
 
 ## The Solution
 
