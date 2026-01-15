@@ -14,7 +14,7 @@ iCloud.com's "Restore Files" page crashes or hangs when you have a large number 
 
 - Page shows spinning wheel forever
 - Browser tab crashes or becomes unresponsive
-- "Restore All" button never appears
+- "Restore All" button stays greyed out (waiting for all files to load)
 - Page loads partially then freezes
 - Safari/Chrome runs out of memory
 
