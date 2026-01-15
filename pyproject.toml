@@ -1,0 +1,39 @@
+[project]
+name = "icloud-restore"
+version = "0.1.0"
+description = "Restore deleted iCloud Drive files when the web UI crashes"
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.10"
+authors = [{ name = "George Zhang" }]
+keywords = ["icloud", "restore", "backup", "recovery"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "Intended Audience :: End Users/Desktop",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: System :: Archiving :: Backup",
+]
+dependencies = [
+    "httpx>=0.25.0",
+    "playwright>=1.40.0",
+]
+
+[project.scripts]
+icloud-restore = "icloud_restore.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/odysseus0/icloud-restore"
+Repository = "https://github.com/odysseus0/icloud-restore"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/icloud_restore"]
